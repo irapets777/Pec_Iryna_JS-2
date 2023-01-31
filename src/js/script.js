@@ -1,54 +1,27 @@
 /*1*/
 
-// let userAge = prompt('Введіть ваш вік:');
+let userAge = prompt('Введіть ваш вік:');
 
-// userAge = +userAge;
+userAge = +userAge;
 
-// if (userAge > 0 && userAge < 12) {
-//     alert('Ви дитина!');
-// }else if (userAge >= 12 && userAge < 18){
-//     alert('Ви підліток!');
-// }else if (userAge >= 18 && userAge < 60){
-//     alert('Ви дорослий!');
-// }else if (userAge >= 60 && userAge < 100){
-//     alert('Ви пенсіонер!');
-// }else if (userAge > 100){
-//     alert('В Україні до такого віку не доживають)');
-// }else{
-//     alert('Введіть корректні дані!');
-// }
+if (userAge > 0 && userAge < 12) {
+    alert('Ви дитина!');
+}else if (userAge >= 12 && userAge < 18){
+    alert('Ви підліток!');
+}else if (userAge >= 18 && userAge < 60){
+    alert('Ви дорослий!');
+}else if (userAge >= 60 && userAge < 100){
+    alert('Ви пенсіонер!');
+}else if (userAge > 100){
+    alert('В Україні до такого віку не доживають)');
+}else{
+    alert('Введіть корректні дані!');
+}
 
 /*2*/
 
-// const USER_NUMBER = Number(prompt('Введіть число від 0 до 9:'));
 
-// if (USER_NUMBER == 0) {
-//     alert(')');
-// }else if (USER_NUMBER == 1){
-//     alert('!');
-// }else if (USER_NUMBER == 2){
-//     alert('@');
-// }else if (USER_NUMBER == 3){
-//     alert('#');
-// }else if (USER_NUMBER == 4){
-//     alert('$');
-// }else if (USER_NUMBER == 5){
-//     alert('%');
-// }else if (USER_NUMBER == 6){
-//     alert('^');
-// }else if (USER_NUMBER == 7){
-//     alert('&');
-// }else if (USER_NUMBER == 8){
-//     alert('*');
-// }else if (USER_NUMBER == 9){
-//     alert('(');
-// }else{
-//     alert('Введіть корректні дані!');
-// }
-
-/*3*/
-
-const USER_NUMBER = Number(prompt('Введіть будь яке число від 0 до 9:'));
+const USER_NUMBER = Number(prompt('Введіть число від 0 до 9:'));
 switch (USER_NUMBER) {
   case 0:
     alert(')');
@@ -81,6 +54,58 @@ switch (USER_NUMBER) {
     alert('(');
     break;
   default:
-    alert('Ви ввели невірне число!');
+    alert('Введіть корректні дані!');
 }
+
+
+/*3*/
+
+const USER_THREE_NUMBER = prompt('Введіть трицифрове число:');
+
+if (USER_THREE_NUMBER > 99 && USER_THREE_NUMBER < 999){
+    if (
+        USER_THREE_NUMBER[0] == USER_THREE_NUMBER[1] ||
+        USER_THREE_NUMBER[0] == USER_THREE_NUMBER[2] ||
+        USER_THREE_NUMBER[1] == USER_THREE_NUMBER[2]
+      ) {
+        alert ('У вашому числі є одинакові цифри')
+      }else {
+        alert ('У вашому числі не має одинакових цифр')
+      }
+}  else {
+    alert ('Введіть корректні дані!');
+} 
+
+
+/*4*/
+
+const YEAR = prompt('Введіть будь-який рік');
+if(YEAR  > 0){
+  if(YEAR  % 4 == 0 && YEAR  % 100 != 0 ){
+    alert(`${YEAR} високосний`);
+  }else{
+    alert(`${YEAR} не високосний`);
+  }
+}else{
+  alert('Введіть корректні дані!');
+}
+
+/*5*/
+
+function palindrome(num) {
+    const USER_NUMBER = USER_FIVE_NUMBER.length;
+    for (let i = 0; i < USER_NUMBER / 2; i++) {
+        if (USER_FIVE_NUMBER[i] !== USER_FIVE_NUMBER[len - 1 - i]) {
+            alert( 'Ваше число не є паліндромом');
+        }
+    }
+    alert( 'Ваше число є паліндромом');
+}
+
+const USER_FIVE_NUMBER = Number (prompt('Введіть п`ятирозрядне число:'));
+const value = palindrome(USER_FIVE_NUMBER);
+console.log(value);
+
+
+
 
