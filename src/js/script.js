@@ -119,11 +119,11 @@ const USER_MONEY = Number(prompt('Введіть суму доларів (USD) �
 if (USER_MONEY > 0){
     const CHANGES = prompt('Впишіть в поле вводу валюту для конвертації: eur, uah або azn');
     if (CHANGES == "eur"){
-        alert (`Ваша сума грошей дорівнює: ${(USER_MONEY * 1,09)} EUR`);window.location.reload();
+        alert (`Ваша сума: ${(USER_MONEY * 1,09)} EUR`);window.location.reload();
     } else if (CHANGES == "uah") {
-        alert(`Ваша сума грошей дорівнює: ${(USER_MONEY * 40.2).toFixed(2)} UAH`);window.location.reload();
+        alert(`Ваша сума: ${(USER_MONEY * 40.2).toFixed(2)} UAH`);window.location.reload();
     } else if (CHANGES == "azn") {
-        alert(`Ваша сума грошей дорівнює: ${(USER_MONEY * 1.70).toFixed(2)} AZN`);window.location.reload();
+        alert(`Ваша сума: ${(USER_MONEY * 1.70).toFixed(2)} AZN`);window.location.reload();
     } else {
         alert('Введіть корректні дані!'); 
         window.location.reload();
@@ -135,6 +135,22 @@ if (USER_MONEY > 0){
 
 /**7 */
 
+const USER_BUY_AMONUT = Number(prompt('Введіть суму покупки:'));
+if (USER_BUY_AMONUT > 0){
+    if (USER_BUY_AMONUT >=200 && USER_BUY_AMONUT <300){
+        alert (`Ваша знижка: ${(USER_BUY_AMONUT - USER_BUY_AMONUT * 0,03).toFixed(2)}`);window.location.reload();
+    } else if (USER_BUY_AMONUT >=300 && USER_BUY_AMONUT <500) {
+        alert(`Ваша знижка: ${(USER_BUY_AMONUT - USER_BUY_AMONUT * 0,05).toFixed(2)}`);window.location.reload();
+    } else if (USER_BUY_AMONUT >=500) {
+        alert(`Ваша знижка: ${(USER_BUY_AMONUT - USER_BUY_AMONUT * 0,07).toFixed(2)}`);window.location.reload();
+    } else {
+        alert(`Немає знижки: ${USER_BUY_AMONUT.toFixed(2)}`); 
+        window.location.reload();
+    }
+} else {
+    alert ('Введіть корректні дані!')
+    window.location.reload();
+}
 
 
 
