@@ -1,61 +1,63 @@
 /*1*/
 
-// let userAge = prompt('Введіть ваш вік:');
+let userAge = prompt('Введіть ваш вік:');
 
-// userAge = +userAge;
+userAge = +userAge;
 
-// if (userAge > 0 && userAge < 12) {
-//     alert('Ви дитина!');
-// }else if (userAge >= 12 && userAge < 18){
-//     alert('Ви підліток!');
-// }else if (userAge >= 18 && userAge < 60){
-//     alert('Ви дорослий!');
-// }else if (userAge >= 60 && userAge < 100){
-//     alert('Ви пенсіонер!');
-// }else if (userAge > 100){
-//     alert('В Україні до такого віку не доживають)');
-// }else{
-//     alert('Введіть корректні дані!');
-// }
+if (userAge > 0 && userAge < 12) {
+    alert('Ви дитина!');
+}else if (userAge >= 12 && userAge < 18){
+    alert('Ви підліток!');
+}else if (userAge >= 18 && userAge < 60){
+    alert('Ви дорослий!');
+}else if (userAge >= 60 && userAge < 100){
+    alert('Ви пенсіонер!');
+}else if (userAge > 100){
+    alert('В Україні до такого віку не доживають)');
+}else{
+    alert('Введіть корректні дані!');
+    window.location.reload();
+}
 
 /*2*/
 
 
-// const USER_NUMBER = Number(prompt('Введіть число від 0 до 9:'));
-// switch (USER_NUMBER) {
-//   case 0:
-//     alert(')');
-//     break;
-//   case 1:
-//     alert('!');
-//     break;
-//   case 2:
-//     alert('@');
-//     break;
-//   case 3:
-//     alert('#');
-//     break;
-//   case 4:
-//     alert('$');
-//     break;
-//   case 5:
-//     alert('%');
-//     break;
-//   case 6:
-//     alert('^');
-//     break;
-//   case 7:
-//     alert('&');
-//     break;
-//   case 8:
-//     alert('*');
-//     break;
-//   case 9:
-//     alert('(');
-//     break;
-//   default:
-//     alert('Введіть корректні дані!');
-// }
+const USER_NUMBER = Number(prompt('Введіть число від 0 до 9:'));
+switch (USER_NUMBER) {
+  case 0:
+    alert(')');
+    break;
+  case 1:
+    alert('!');
+    break;
+  case 2:
+    alert('@');
+    break;
+  case 3:
+    alert('#');
+    break;
+  case 4:
+    alert('$');
+    break;
+  case 5:
+    alert('%');
+    break;
+  case 6:
+    alert('^');
+    break;
+  case 7:
+    alert('&');
+    break;
+  case 8:
+    alert('*');
+    break;
+  case 9:
+    alert('(');
+    break;
+  default:
+    alert('Введіть корректні дані!');
+    window.location.reload();
+}
 
 
 /*3*/
@@ -74,7 +76,8 @@
 //       }
 // }  else {
 //     alert ('Введіть корректні дані!');
-// } 
+//     window.location.reload();
+// }   
 
 
 /*4*/
@@ -88,27 +91,49 @@
 //   }
 // }else{
 //   alert('Введіть корректні дані!');
+//   window.location.reload();
 // }
 
 /*5*/
-const USER_FIVE_NUMBER = Number(prompt('Введіть п`ятирозрядне число:'));
-const USER_NUMBER = String(USER_FIVE_NUMBER).length - 1;
-for (let i = 0; i < String(USER_FIVE_NUMBER).length / 2; i++) {
-  if (String(USER_FIVE_NUMBER).length == 5) {
-    if (String(USER_FIVE_NUMBER)[i] == String(USER_FIVE_NUMBER)[USER_NUMBER - i]) {
-      alert('Ваше число є паліндромом');
-      break;
-    } else {
-      alert('Ваше число не є паліндромом');
-      break;
-    }
-  } else {
-    alert('Введіть корректні дані!');
-    break;
-  }
-}
+// const USER_FIVE_NUMBER = Number(prompt('Введіть п`ятирозрядне число:'));
+// const USER_NUMB = String(USER_FIVE_NUMBER).length - 1;
+// for (let i = 0; i < String(USER_FIVE_NUMBER).length / 2; i++) {
+//   if (String(USER_FIVE_NUMBER).length == 5) {
+//     if (String(USER_FIVE_NUMBER)[i] == String(USER_FIVE_NUMBER)[USER_NUMB - i]) {
+//       alert('Ваше число є паліндромом');
+//       break;
+//     } else {
+//       alert('Ваше число не є паліндромом');
+//       break;
+//     }
+//   } else {
+//     alert('Введіть корректні дані!');
+//     window.location.reload();
+//     break;
+//   }
+// }
 
 /*6*/
+
+const USER_MONEY = Number(prompt('Введіть суму доларів (USD) яку хочете поміняти'));
+if (USER_MONEY > 0){
+    const CHANGES = prompt('Впишіть в поле вводу валюту для конвертації: eur, uah або azn');
+    if (CHANGES == "eur"){
+        alert (`Ваша сума грошей дорівнює: ${(USER_MONEY * 1,09)} EUR`);window.location.reload();
+    } else if (CHANGES == "uah") {
+        alert(`Ваша сума грошей дорівнює: ${(USER_MONEY * 40.2).toFixed(2)} UAH`);window.location.reload();
+    } else if (CHANGES == "azn") {
+        alert(`Ваша сума грошей дорівнює: ${(USER_MONEY * 1.70).toFixed(2)} AZN`);window.location.reload();
+    } else {
+        alert('Введіть корректні дані!'); 
+        window.location.reload();
+    }
+} else {
+    alert ('Введіть корректні дані!')
+    window.location.reload();
+}
+
+/**7 */
 
 
 
