@@ -108,6 +108,8 @@ for (let i = 0; i < String(USER_FIVE_NUMBER).length / 2; i++) {
   }
 }
 
+/*6*/
+
 
 
 
